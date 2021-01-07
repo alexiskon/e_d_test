@@ -1,1 +1,34 @@
-<p>winners works!</p>
+<div class="year">
+    <label>Year</label>
+    <br>
+    <input id="year-input" placeholder="Select year...">
+    <button type="submit" class="btn btn-primary" color="primary" (click)="yearInput()">Submit</button>
+</div>
+<header>{{displayedYear}} Standings</header>
+<table matSort id="table" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="headers"> Position </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="points">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="headers"> Points </th>
+        <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="driverName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="headers"> Driver </th>
+        <td mat-cell *matCellDef="let element"> {{element.Driver.givenName}} {{element.Driver.familyName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="constructorName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="headers"> Constructor </th>
+        <td mat-cell *matCellDef="let element"> {{element.Constructors[0].constructorId}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+<mat-paginator id="page" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>

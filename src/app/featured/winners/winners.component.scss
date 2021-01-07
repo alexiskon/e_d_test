@@ -1,0 +1,39 @@
+.year {
+    // text-align: center;
+    background-color: rgb(250, 199, 199);
+    border-radius: 20px;
+    padding: 10px;
+}
+.year label {
+    font-size: x-large;
+    font-weight: 1000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: cursive;
+
+}
+.year input {
+    margin-right: 20px;
+    border-radius: 20px;
+}
+header {
+    font-size: xx-large;
+    font-weight: 1000;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: cursive;
+}
+
+td, th {
+    width: 200px;
+}
+.mat-row:nth-child(even){
+    background-color: white;
+}
+        
+.mat-row:nth-child(odd){
+    background-color: rgb(250, 199, 199);
+}
+table td {
+    border: none;
+}

@@ -1,0 +1,30 @@
+    <div class="submitted" *ngIf="submitted && contactForm.valid">
+        <span>Your message has been sent!</span>
+    </div>
+    <form class="contactForm" [formGroup]="contactForm" (submit)="submitForm()">
+        <div class="row">
+            <label id="header">Contact your favourite driver!</label>
+        </div>
+        <div class="row">
+            <div class="form-group" id="subject">
+                <label>Subject <span class="invalid" *ngIf="contactForm.controls.subject.invalid">*</span></label>
+                <input type="text" formControlName="subject" class="form-control" placeholder="Subject..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label>Message <span class="invalid" *ngIf="contactForm.controls.message.invalid">*</span></label>
+                <textarea type="text" formControlName="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message.."></textarea> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group" id="driver">
+                <label>Driver <span class="invalid" *ngIf="contactForm.controls.driversName.invalid">*</span></label>
+                <input type="text" formControlName="driversName" class="form-control" placeholder="Driver 's name..">
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary"  type="submit">Submit</button>
+            <button class="btn btn-danger" id="cancel"  type="submit" [routerLink]="['']">Cancel</button>
+        </div>
+    </form>

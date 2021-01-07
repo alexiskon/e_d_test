@@ -1,39 +1,56 @@
 .year {
-    // text-align: center;
-    background-color: rgb(250, 199, 199);
-    border-radius: 20px;
-    padding: 10px;
+  // text-align: center;
+  background-color: rgb(250, 199, 199);
+  border-radius: 20px;
+  padding: 10px;
 }
+
 .year label {
-    font-size: x-large;
-    font-weight: 1000;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: cursive;
+  font-size: x-large;
+  font-weight: 1000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: cursive;
 
 }
+
 .year input {
-    margin-right: 20px;
-    border-radius: 20px;
-}
-header {
-    font-size: xx-large;
-    font-weight: 1000;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-family: cursive;
+  margin-right: 20px;
+  border-radius: 20px;
 }
 
-td, th {
-    width: 200px;
+header {
+  font-size: xx-large;
+  font-weight: 1000;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: cursive;
 }
-.mat-row:nth-child(even){
-    background-color: white;
+
+td,
+th {
+  width: 200px;
 }
-        
-.mat-row:nth-child(odd){
-    background-color: rgb(250, 199, 199);
+
+.mat-row:nth-child(even) {
+  background-color: white;
 }
+
+.mat-row:nth-child(odd) {
+  background-color: rgb(250, 199, 199);
+}
+
 table td {
-    border: none;
+  border: none;
+}
+
+.errormsg {
+  background-color: rgb(199, 36, 36);
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  font-size: large;
 }

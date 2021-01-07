@@ -32,3 +32,6 @@
 
 </table>
 <mat-paginator id="page" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+<div class="errormsg" *ngIf="yearcontrol">
+    <span>Select year between 1950 and 2020</span>
+</div>

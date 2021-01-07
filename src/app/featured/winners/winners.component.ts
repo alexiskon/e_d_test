@@ -23,7 +23,10 @@ export class WinnersComponent implements OnInit {
  
    data = [];
    displayedYear: string = "2020";
- 
+   //-------------error control values------------\\
+   yearcontrol: boolean = false;
+   yearcontrolvalue: number;
+ //-------------error control values------------\\
 
   ngOnInit(): void {
     this.getdata.getData(this.displayedYear).subscribe(value => {
@@ -35,11 +38,17 @@ export class WinnersComponent implements OnInit {
   }
   yearInput() {
     this.displayedYear = (document.getElementById('year-input') as HTMLInputElement).value
+    this.yearcontrolvalue = parseInt(this.displayedYear)
+    if ( (this.yearcontrolvalue < 1950) || (this.yearcontrolvalue > 2020) ) {
+      this.yearcontrol = true;
+      return;
+    }
     this.getdata.getData(this.displayedYear).subscribe(value => {
       this.data = value.MRData.StandingsTable.StandingsLists[0].DriverStandings
       this.dataSource = new MatTableDataSource(this.data)
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
+      this.yearcontrol = false;
     })
   }
 

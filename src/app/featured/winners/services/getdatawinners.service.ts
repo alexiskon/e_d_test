@@ -12,7 +12,6 @@ export class GetdatawinnersService {
   url = 'http://ergast.com/api/f1/'
 
   getData(year): Observable<any> {
-    console.log(year)
     return this.http.get<any>(this.url + year + '/driverStandings.json?offset=0')
   }
 }

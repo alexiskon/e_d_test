@@ -1,6 +1,6 @@
 .year {
   // text-align: center;
-  background-color: rgb(250, 199, 199);
+  background-color: rgb(216, 213, 213);
   border-radius: 20px;
   padding: 10px;
 }
@@ -37,7 +37,7 @@ th {
 }
 
 .mat-row:nth-child(odd) {
-  background-color: rgb(250, 199, 199);
+  background-color: rgb(216, 213, 213);
 }
 
 table td {
@@ -47,10 +47,10 @@ table td {
 .errormsg {
   background-color: rgb(199, 36, 36);
   width: 100%;
-  height: 50px;
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
   text-align: center;
   justify-content: center;
-  font-size: large;
+  border-radius: 3px;
 }

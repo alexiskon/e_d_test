@@ -4,6 +4,11 @@
     <input id="year-input" placeholder="Select year...">
     <button type="submit" class="btn btn-primary" color="primary" (click)="yearInput()">Submit</button>
 </div>
+
+<div class="errormsg" *ngIf="yearcontrol">
+    <span>Select year between 1950 and 2020</span>
+</div>
+
 <header>{{displayedYear}} Standings</header>
 <table matSort id="table" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -32,6 +37,3 @@
 
 </table>
 <mat-paginator id="page" [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-<div class="errormsg" *ngIf="yearcontrol">
-    <span>Select year between 1950 and 2020</span>
-</div>

@@ -11,9 +11,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 -Create a folder in your file system
 -Select the created folder from Visual Studio Code or another bash
--Run: 1) npm install,
-      2) npm install -g @angular/cli
-      3) ng serve
+-Run: 1) git clone https://github.com/alexiskon/e_d_test ,
+      2) npm install ,
+      3) npm install -g @angular/cli ,
+      4) ng serve
 -Open browser on: localhost:4200
 
 ## Running unit tests

@@ -21,7 +21,7 @@ export class WinnersComponent implements OnInit, OnDestroy {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   //------------initialize angular material table---------\\
-  
+
   subs: Subscription = new Subscription();
   data = [];
   displayedYear: string = "2020";
@@ -39,12 +39,25 @@ export class WinnersComponent implements OnInit, OnDestroy {
     }))
   }
   yearInput() {
-    this.displayedYear = (document.getElementById('year-input') as HTMLInputElement).value
-    this.yearcontrolvalue = parseInt(this.displayedYear)
+    if ((document.getElementById('year-input') as HTMLInputElement).value == "") {
+      this.yearcontrol = true;
+      return;
+    }
+
+    this.yearcontrolvalue = parseInt((document.getElementById('year-input') as HTMLInputElement).value)
     if ((this.yearcontrolvalue < 1950) || (this.yearcontrolvalue > 2020)) {
       this.yearcontrol = true;
       return;
     }
+
+    this.displayedYear = (document.getElementById('year-input') as HTMLInputElement).value;
+    // this.yearcontrolvalue = parseInt(this.displayedYear)   
+
+    // if ((this.yearcontrolvalue < 1950) || (this.yearcontrolvalue > 2020) || (this.displayedYear === "")) {
+    //   this.yearcontrol = true;
+    //   return;
+    // }
+
     this.subs.add(this.getdata.getData(this.displayedYear).subscribe(value => {
       this.data = value.MRData.StandingsTable.StandingsLists[0].DriverStandings
       this.dataSource = new MatTableDataSource(this.data)

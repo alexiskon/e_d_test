@@ -14,7 +14,4 @@ export class ResultsserviceService {
   getData(year, round): Observable<any> {
     return this.http.get<any>(`${this.url}${year}/${round}/results.json`)
   }
-  getLength(year): Observable<any> {
-    return this.http.get<any>(`${this.url}${year}/results.json?limit=420`)
-  }
 }

@@ -84,7 +84,6 @@ export class ResultsComponent implements OnInit, OnDestroy  {
       this.info1 = `${value.MRData.RaceTable.season}, Round ${value.MRData.RaceTable.round}, Race Results`;
       this.info2 = `${value.MRData.RaceTable.Races[0].Circuit.Location.country}, ${value.MRData.RaceTable.Races[0].Circuit.circuitName},  ${value.MRData.RaceTable.Races[0].date}`;
       this.data = value.MRData.RaceTable.Races[0].Results
-      console.log(this.data)
       this.dataSource = new MatTableDataSource(this.data)
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;

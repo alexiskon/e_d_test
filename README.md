@@ -2,17 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
-## Development server
+## Working enviroment
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+-Visual Studio Code
+-Google Chrome
 
-## Code scaffolding
+## Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-Create a folder in your file system
+-Select the created folder from 
 
-## Build
+## Required packages
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+-Angular CLI
+-Bootstrap
+-Angular Material
+
+## Required packages installation
+
+-Angular CLI---> npm install -g @angular/cli
+-Bootstrap---> npm install bootstrap
+-Angular Material---> ng add @angular/material
+-npm install
 
 ## Running unit tests
 

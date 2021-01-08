@@ -10,20 +10,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Instructions
 
 -Create a folder in your file system
--Select the created folder from 
-
-## Required packages
-
--Angular CLI
--Bootstrap
--Angular Material
-
-## Required packages installation
-
--Angular CLI---> npm install -g @angular/cli
--Bootstrap---> npm install bootstrap
--Angular Material---> ng add @angular/material
--npm install
+-Select the created folder from Visual Studio Code or another bash
+-Run: 1) npm install,
+      2) npm install -g @angular/cli
+      3) ng serve
+-Open browser on: localhost:4200
 
 ## Running unit tests
 

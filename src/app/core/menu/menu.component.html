@@ -1,16 +1,28 @@
-<nav class="navbar navbar-expand">
-    <span><img src="../../../assets/f1-dark.png"></span>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['']">Results</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['winners']">Winners</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['contact']">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand fixed-top">
+  <button class="navbar-toggler">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <span><img src="../../../assets/f1-dark.png"></span>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['']">Results</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['winners']">Winners</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['contact']">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropdownbtn">&#9776;</button>
+    <ul class="dropdown-content">
+      <li><a [routerLink]="['']">Results</a></li>
+      <li><a [routerLink]="['winners']">Winners</a></li>
+      <li><a [routerLink]="['contact']">Contact</a></li>
+    </ul>
+  </div>
+</nav>
